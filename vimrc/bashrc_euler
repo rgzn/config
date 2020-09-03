@@ -1,0 +1,16 @@
+PSANAN_RC_ROOT=$HOME/util/rc
+source $PSANAN_RC_ROOT/bashrc
+################################################################################
+
+#https://scicomp.ethz.ch/wiki/Reopening_of_Euler_and_Leonhard_(May_2020)
+git config --global http.proxy http://proxy.ethz.ch:3128
+git config --global https.proxy http://proxy.ethz.ch:3128
+
+alias q=bjobs
+alias cds="cd $SCRATCH"
+alias setppardiso="export PETSC_DIR=/cluster/home/pasanan/petsc-pardiso; export PETSC_ARCH=arch-euler-pardiso;  whichp; echo \"  module purge; module load python/2.7.6; module load openblas; module load gcc; module load open_mpi\""
+
+export EXSADDLE_WITH_PCILDL=1
+export ILUPACK_PLATFORM=GNU64
+
+export PTATIN_DIR=$HOME/ptatin3d

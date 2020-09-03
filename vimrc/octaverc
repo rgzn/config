@@ -1,0 +1,5 @@
+PETSC_DIR=getenv('PETSC_DIR');
+if length(PETSC_DIR)==0
+  PETSC_DIR='~/code/petsc'
+end
+addpath([PETSC_DIR,'/share/petsc/matlab'])
